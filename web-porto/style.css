@@ -1,0 +1,766 @@
+/* ==================================================
+   GOOGLE FONT
+================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+
+/* ==================================================
+   RESET
+================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Poppins", sans-serif;
+}
+
+
+/* ==================================================
+   BODY
+================================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+
+  background-color: #081b29;
+
+  color: #ededed;
+
+  overflow-x: hidden;
+}
+
+
+/* ==================================================
+   BACKGROUND SEMUA BAGIAN
+================================================== */
+
+.header,
+.home,
+.foto,
+.resume {
+  background-color: #081b29;
+}
+
+
+/* ==================================================
+   HEADER
+================================================== */
+
+.header {
+  position: relative;
+
+  width: 100%;
+  min-height: 80px;
+
+  padding: 20px 10%;
+
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  z-index: 1000;
+
+  transition: 0.3s;
+}
+
+
+/* HEADER SAAT SCROLL */
+
+.header.scrolled {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  background: rgba(8, 27, 41, 0.95);
+
+  backdrop-filter: blur(10px);
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+/* ==================================================
+   LOGO
+================================================== */
+
+.logo {
+  color: #ededed;
+
+  font-size: clamp(22px, 3vw, 28px);
+
+  font-weight: 600;
+
+  text-decoration: none;
+}
+
+
+/* ==================================================
+   NAVBAR
+================================================== */
+
+.navbar {
+  display: flex;
+
+  align-items: center;
+
+  gap: 30px;
+}
+
+.navbar a {
+  color: #ededed;
+
+  font-size: clamp(14px, 1.5vw, 17px);
+
+  font-weight: 500;
+
+  text-decoration: none;
+
+  transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: #00abf0;
+}
+
+
+/* ==================================================
+   MENU ICON
+================================================== */
+
+.menu-icon {
+  display: none;
+
+  color: #00abf0;
+
+  font-size: 32px;
+
+  cursor: pointer;
+}
+
+
+/* ==================================================
+   HOME
+================================================== */
+
+.home {
+  min-height: calc(100vh - 80px);
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  padding: 80px 10%;
+}
+
+.home-content {
+  width: 100%;
+
+  max-width: 700px;
+}
+
+
+/* JUDUL */
+
+.home-content h1 {
+  font-size: clamp(32px, 5vw, 56px);
+
+  line-height: 1.2;
+
+  font-weight: 700;
+}
+
+
+/* SUBJUDUL */
+
+.home-content h3 {
+  margin-top: 10px;
+
+  color: #00abf0;
+
+  font-size: clamp(22px, 3vw, 32px);
+
+  font-weight: 700;
+}
+
+
+/* PARAGRAF */
+
+.home-content p {
+  max-width: 650px;
+
+  margin: 20px 0 40px;
+
+  font-size: clamp(14px, 1.5vw, 16px);
+
+  line-height: 1.8;
+}
+
+
+/* ==================================================
+   BUTTON
+================================================== */
+
+.btn-box {
+  display: flex;
+
+  gap: 15px;
+
+  width: min(345px, 100%);
+
+  height: 50px;
+}
+
+.btn-box a {
+  flex: 1;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  border: 2px solid #00abf0;
+
+  border-radius: 8px;
+
+  background: #00abf0;
+
+  color: #081b29;
+
+  text-decoration: none;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.btn-box a:hover {
+  background: transparent;
+
+  color: #00abf0;
+}
+
+.btn-box a:nth-child(2) {
+  background: transparent;
+
+  color: #00abf0;
+}
+
+.btn-box a:nth-child(2):hover {
+  background: #00abf0;
+
+  color: #081b29;
+}
+
+
+/* ==================================================
+   SOCIAL MEDIA
+================================================== */
+
+.home-sci {
+  position: absolute;
+
+  left: 10%;
+  bottom: 40px;
+
+  display: flex;
+
+  gap: 15px;
+}
+
+.home-sci a {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  border: 2px solid #00abf0;
+
+  border-radius: 50%;
+
+  color: #00abf0;
+
+  text-decoration: none;
+
+  font-size: 21px;
+
+  transition: 0.3s;
+}
+
+.home-sci a:hover {
+  background: #00abf0;
+
+  color: #081b29;
+
+  transform: translateY(-5px);
+}
+
+
+/* ==================================================
+   FOTO
+================================================== */
+
+.foto {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 80px 10%;
+}
+
+.foto-content {
+  width: min(400px, 100%);
+}
+
+.foto-content img {
+  width: 100%;
+
+  height: auto;
+
+  display: block;
+
+  border-radius: 20px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+
+  transition: 0.4s;
+}
+
+.foto-content img:hover {
+  transform: scale(1.03);
+}
+
+
+/* ==================================================
+   RESUME
+================================================== */
+
+.resume {
+  min-height: 60vh;
+
+  display: flex;
+
+  align-items: center;
+
+  padding: 80px 10%;
+}
+
+.resume-content {
+  width: 100%;
+
+  max-width: 1000px;
+
+  margin: auto;
+}
+
+
+/* JUDUL RESUME */
+
+.resume-content h1 {
+  margin-bottom: 30px;
+
+  color: #ededed;
+
+  font-size: clamp(32px, 5vw, 56px);
+
+  line-height: 1.2;
+}
+
+
+/* PARAGRAF */
+
+.resume-content > p {
+  margin-bottom: 25px;
+
+  color: #ededed;
+
+  font-size: clamp(14px, 1.5vw, 16px);
+
+  line-height: 1.8;
+}
+
+
+/* ==================================================
+   RESUME INFO
+================================================== */
+
+.resume-info {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+
+  margin-top: 40px;
+}
+
+.info-box {
+  padding: 25px;
+
+  background: #0b2538;
+
+  border: 1px solid rgba(0, 171, 240, 0.3);
+
+  border-radius: 12px;
+
+  text-align: center;
+
+  transition: 0.3s;
+}
+
+.info-box:hover {
+  transform: translateY(-8px);
+
+  border-color: #00abf0;
+
+  box-shadow: 0 10px 25px rgba(0, 171, 240, 0.15);
+}
+
+.info-box i {
+  margin-bottom: 10px;
+
+  color: #00abf0;
+
+  font-size: 35px;
+}
+
+.info-box h3 {
+  margin-bottom: 5px;
+
+  font-size: 18px;
+}
+
+.info-box p {
+  color: #aaa;
+
+  font-size: 14px;
+}
+
+
+/* ==================================================
+   REVEAL ANIMATION
+================================================== */
+
+.reveal {
+  opacity: 0;
+
+  transform: translateY(50px);
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+
+/* ==================================================
+   BACK TO TOP
+================================================== */
+
+.back-to-top {
+  position: fixed;
+
+  right: 25px;
+  bottom: 25px;
+
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  border: 2px solid #00abf0;
+
+  border-radius: 50%;
+
+  background: #00abf0;
+
+  color: #081b29;
+
+  font-size: 25px;
+
+  cursor: pointer;
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transform: translateY(20px);
+
+  transition: 0.3s;
+
+  z-index: 999;
+}
+
+.back-to-top.show {
+  opacity: 1;
+
+  visibility: visible;
+
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: transparent;
+
+  color: #00abf0;
+}
+
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+.footer {
+  padding: 30px 10%;
+
+  background: #061522;
+
+  color: #aaa;
+
+  font-size: 14px;
+
+  text-align: center;
+}
+
+.footer span {
+  color: #00abf0;
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 768px) {
+
+  /* HEADER */
+
+  .header {
+    padding: 15px 6%;
+  }
+
+
+  /* MENU */
+
+  .menu-icon {
+    display: block;
+  }
+
+
+  /* NAVBAR */
+
+  .navbar {
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+
+    width: 100%;
+
+    display: none;
+
+    flex-direction: column;
+
+    gap: 0;
+
+    padding: 20px;
+
+    background: #081b29;
+
+    border-top: 1px solid rgba(0, 171, 240, 0.2);
+  }
+
+  .navbar.active {
+    display: flex;
+  }
+
+  .navbar a {
+    width: 100%;
+
+    padding: 12px;
+
+    text-align: center;
+  }
+
+
+  /* HOME */
+
+  .home {
+    min-height: auto;
+
+    padding: 100px 6% 140px;
+
+    text-align: center;
+  }
+
+  .home-content {
+    margin: auto;
+  }
+
+  .home-content p {
+    margin-left: auto;
+
+    margin-right: auto;
+  }
+
+
+  /* BUTTON */
+
+  .btn-box {
+    margin: auto;
+  }
+
+
+  /* SOCIAL MEDIA */
+
+  .home-sci {
+    left: 50%;
+
+    bottom: 50px;
+
+    transform: translateX(-50%);
+  }
+
+
+  /* FOTO */
+
+  .foto {
+    padding: 60px 6%;
+  }
+
+
+  /* RESUME */
+
+  .resume {
+    padding: 70px 6%;
+  }
+
+
+  .resume-info {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* ==================================================
+   HP
+================================================== */
+
+@media (max-width: 480px) {
+
+  /* HEADER */
+
+  .header {
+    padding: 14px 5%;
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+
+
+  /* HOME */
+
+  .home {
+    padding: 70px 5% 130px;
+  }
+
+  .home-content h1 {
+    font-size: 32px;
+  }
+
+  .home-content h3 {
+    font-size: 22px;
+  }
+
+  .home-content p {
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+
+
+  /* BUTTON */
+
+  .btn-box {
+    width: 100%;
+
+    height: 45px;
+  }
+
+  .btn-box a {
+    font-size: 14px;
+  }
+
+
+  /* FOTO */
+
+  .foto {
+    padding: 50px 5%;
+  }
+
+
+  /* RESUME */
+
+  .resume {
+    padding: 60px 5%;
+  }
+
+  .resume-content h1 {
+    font-size: 30px;
+  }
+
+  .resume-content > p {
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+
+
+  /* INFO */
+
+  .info-box {
+    padding: 20px;
+  }
+
+
+  /* BACK TO TOP */
+
+  .back-to-top {
+    right: 15px;
+    bottom: 15px;
+
+    width: 40px;
+    height: 40px;
+
+    font-size: 21px;
+  }
+
+}
